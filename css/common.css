@@ -1,0 +1,677 @@
+/* 在各个页面通用的样式 */
+
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+body{
+    background-color: #f5f5f5;
+}
+
+
+/* 顶部导航 */
+.top_nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 64px;
+    background-color: #fff;
+    z-index: 999;
+}
+
+.top_nav .shortcut{
+    height: 100%;
+    /* background-color: skyblue; */
+}
+
+.top_nav .shortcut .logo{
+    float: left;
+    width: 217px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    margin-right: 33px;
+    /* background-color: blue; */
+}
+
+.top_nav .shortcut .logo img{
+    width: 100%;
+}
+
+.top_nav .shortcut .top_nav_left{
+    position: relative;
+    float: left;
+    width: 357px;
+    height: 100%;
+    /* background-color: pink;  */
+    padding: 0 0 0 32px;
+}
+
+.top_nav .shortcut .top_nav_left ul li{
+    float: left;
+}
+
+.top_nav .shortcut .top_nav_left ul li a{
+    font-size: 16px;
+    color: #333;
+    line-height: 64px;
+}
+
+/* 课程详细分类部分 */
+.top_nav .shortcut .top_nav_left ul .course_classify{
+    position: relative;
+} 
+
+.top_nav .shortcut .top_nav_left ul .course_classify .course_sort{
+    display: none;
+    position: absolute;
+    top: 54px;
+    left: -101px;
+    width: 662px;
+    height: 557px;
+    padding: 32px 32px 12px 32px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+}
+
+.top_nav .shortcut .top_nav_left ul .course_classify .triangle_left{
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 13px solid transparent;
+    border-bottom-color: #fff;
+}
+
+.top_nav .shortcut .top_nav_left ul .course_classify .triangle_left::before{
+    display: none;
+    position: absolute;
+    top: -15px;
+    left: -14px;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 14px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.15);
+    filter: blur(2px);
+    z-index: -1;
+}
+
+.top_nav .shortcut .top_nav_left ul .course_classify:hover .course_sort{
+    display: block;
+}
+.top_nav .shortcut .top_nav_left ul .course_classify:hover .triangle_left{
+    display: block;
+}
+.top_nav .shortcut .top_nav_left ul .course_classify:hover .triangle_left::before{
+    display: block;
+}
+
+/* 实现移开a不会消失 */
+
+.top_nav .shortcut .top_nav_left ul .course_classify .course_sort > p{
+    height: 34px;
+    width: 275px;
+    padding-bottom: 14px;
+    color: #999;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.top_nav .shortcut .top_nav_left ul .course_classify .course_sort > div:nth-of-type(1){
+    width: 598px;
+    height: 75px;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 237, 213, 0.5);
+}
+
+.top_nav .shortcut .top_nav_left ul .course_classify .course_sort div:nth-of-type(1) .course_box{
+    position: relative;
+    width: 566px;
+    height: 47px;
+}
+
+.top_nav .shortcut .top_nav_left ul .course_classify .course_sort div:nth-of-type(1) .course_box > h1{
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.top_nav .shortcut .top_nav_left ul .course_classify .course_sort div:nth-of-type(1) .course_box > p{
+    font-size: 12px;
+    color: #00000066;
+}
+
+.top_nav .shortcut .top_nav_left ul .course_classify .course_sort div:nth-of-type(1) .course_box > .course_details{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 96px;
+    height: 32px;
+    background-color: #ffdea7;
+    text-align: center;
+    line-height: 32px;
+    color: #333;
+    font-size: 14px;
+    border-radius: 16px;
+}
+
+.top_nav .shortcut .top_nav_left ul .course_classify .course_sort .sort_details{
+    margin-bottom: 20px;
+    width: 610px;
+}
+
+.top_nav .shortcut .top_nav_left ul .course_classify .course_sort .sort_details .sort_items{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.top_nav .shortcut .top_nav_left ul .course_classify .course_sort .sort_details .sort_items > div{
+    width: 110px;
+    height: 32px;
+    padding: 0 10px;
+    margin: 9px 12px 2px 0;
+    border-radius: 16px;
+    line-height: 32px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.top_nav .shortcut .top_nav_left ul .course_classify .course_sort .sort_details .sort_items > div:hover{
+    background-color: #e5f9ee;
+    color: #00c758;
+}
+
+.top_nav .shortcut .top_nav_left ul .course_classify .course_sort .sort_details > h1{
+    height: 22px;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0;
+}
+
+/* app二维码部分 */
+.top_nav .shortcut .top_nav_left ul .download_app{
+    position: relative;
+}
+
+.top_nav .shortcut .top_nav_left ul .download_app .app_pic{
+    display: none;
+    position: absolute;
+    top: 54px;
+    right: 0px;
+    width: 170px;
+    height: 170px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+
+.top_nav .shortcut .top_nav_left ul .download_app .app_pic img{
+    width: 140px;
+    height: 140px;
+}
+
+.top_nav .shortcut .top_nav_left ul li a:hover{
+    color: #00ad4d;
+}
+
+/* 兄弟选择器，悬停在a上相邻的div显示出来 */
+.top_nav .shortcut .top_nav_left ul li a:hover ~ .app_pic{
+    display: block;
+}
+.top_nav .shortcut .top_nav_left ul li a:hover ~ .triangle_mid{
+    display: block;
+}
+
+/* 三角形 */
+.top_nav .shortcut .top_nav_left ul .download_app .triangle_mid{
+    display: none;
+    position: absolute;
+    top: 37px;
+    right: 22px;
+    width: 0;
+    height: 0;
+    border: 9px solid transparent;
+    border-bottom-color: #ddd;
+    z-index: 1;
+}
+
+.top_nav .shortcut .top_nav_left ul li:nth-child(n+2){
+    margin-left: 40px;
+}
+
+.top_nav .shortcut .top_nav_left ul li:nth-child(1) a::after{
+    font-family: iconfont;
+    content: "\e628";
+    position: absolute;
+    top: -9px;
+    left: 28px;
+    font-size: 25px;
+    color: #c6c6c6;
+    transform-origin: 12px 41px;
+    transition: all 0.4s;
+}
+
+.top_nav .shortcut .top_nav_left ul li:nth-child(1) a:hover::after{
+    transform: rotate(180deg);
+}
+
+.top_nav .shortcut .top_nav_right{
+    float: left;
+    width: 593px;
+    height: 100%;
+    /* background-color: pink; */
+}
+
+.top_nav .shortcut .top_nav_right .search{
+    position: relative;
+    float: left;
+}
+
+.top_nav .shortcut .top_nav_right .search input{
+    width: 256px;
+    height: 32px;
+    border: 1px solid #00c758;
+    outline: none;
+    border-radius: 16px;
+    margin: 16px 30px 16px 28px;
+    padding-left: 24px;
+    font-size: 12px;
+    color: #333;
+    font-family: "宋体";
+    line-height: 32px;
+}
+
+.top_nav .shortcut .top_nav_right .search input::placeholder{
+    color: #b8b8b8;
+    font-size: 14px;
+    line-height: 32px;
+}
+
+.top_nav .shortcut .top_nav_right .search input:focus::placeholder{
+    opacity: 0;
+}
+
+.top_nav .shortcut .top_nav_right .search button{
+    position: absolute;
+    top: 16px;
+    right: 31px;
+    width: 56px;
+    height: 32px;
+    background-color: #00cc7e;
+    border-radius: 16px;
+    font-family: iconfont;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+
+.top_nav .shortcut .top_nav_right .search button:hover{
+    background-color: #00b26e;
+}
+
+.top_nav .shortcut .top_nav_right ul li{
+    float: left;
+}
+
+.top_nav .shortcut .top_nav_right ul li a{
+    font-size: 16px;
+    color: #333;
+    line-height: 64px;
+}
+
+.top_nav .shortcut .top_nav_right ul li a:hover{
+    color: #00ad4d;
+}
+
+.top_nav .shortcut .top_nav_right ul li:nth-child(2){
+    margin: 0 32px;
+}
+
+.top_nav .shortcut .top_nav_right .user_pic{
+    position: relative;
+    float: right;
+    width: 71px;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.top_nav .shortcut .top_nav_right .user_pic img{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 3px;
+}
+
+.top_nav .shortcut .top_nav_right .user_pic::after{
+    font-family: iconfont;
+    content: "\e667";
+    position: absolute;
+    top: 21px;
+    right: 13px;
+    font-size: 16px;
+    color: #999;
+    transition: all 0.4s;
+}
+
+.top_nav .shortcut .top_nav_right .user_pic:hover::after{
+    transform: rotate(180deg);
+}
+
+.top_nav .shortcut .top_nav_right .user_pic:hover ul{
+    display: block;
+}
+.top_nav .shortcut .top_nav_right .user_pic:hover .triangle_right{
+    display: block;
+}
+
+.top_nav .shortcut .top_nav_right .user_pic ul{
+    display: none;
+    position: absolute;
+    top: 58px;
+    right: 19px;
+    width: 185px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 5px 10px;
+}
+
+.top_nav .shortcut .top_nav_right .user_pic ul li{
+    position: relative;
+    width: 165px;
+    height: 32px;
+    padding: 0 10px;
+    /* 这里的margin是去除上面某个ul li设置的影响 */
+    margin: 0;
+    text-align: start;
+}
+
+.top_nav .shortcut .top_nav_right .user_pic ul li:nth-child(1){
+    padding: 0;
+    border-bottom: 1px solid #eaeaea;
+    text-align: center;
+}
+
+.top_nav .shortcut .top_nav_right .user_pic ul li:nth-child(7){
+    border-top: 1px solid #eaeaea;
+}
+
+.top_nav .shortcut .top_nav_right .user_pic ul li a{
+    font-size: 12px;
+    color: #666;
+    line-height: 32px;
+}
+
+.top_nav .shortcut .top_nav_right .user_pic ul li:nth-child(1) a{
+    color: #999;
+}
+
+
+.top_nav .shortcut .top_nav_right .user_pic ul li:nth-child(n+2) a:hover{
+    color: #00ad4d;
+}
+
+.top_nav .shortcut .top_nav_right .user_pic .triangle_right{
+    display: none;
+    position: absolute;
+    top: 42px;
+    right: 38px;
+    border: 9px solid transparent;
+    border-bottom-color: #fff;
+    z-index: 2;
+}
+
+.top_nav .shortcut .top_nav_right .user_pic .triangle_right_border{
+    border-bottom-color: #ddd;
+    top: 41px;
+    right: 38px;
+    z-index: 1;
+}
+
+
+/* 右下角固定小盒子部分 */
+.fixed .fixed_top{
+    position: fixed;
+    right: 16px;
+    bottom: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 100px;
+    background-color: #00cc7e;
+    border-radius: 4px;
+}
+
+.fixed .fixed_top > span{
+    display: inline-block;
+    width: 16px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 18px;
+}
+
+.fixed .fixed_box_bottom{
+    position: fixed;
+    right: 16px;
+    bottom: 12px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    /* background-color: pink; */
+    width: 40px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.fixed .fixed_box_bottom > .fixed_items{
+    width: 40px;
+}
+
+.fixed .fixed_box_bottom > .fixed_items > a{
+    width: 40px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.fixed .fixed_box_bottom > div:nth-child(1) a{
+    margin-bottom: -12px;
+}
+.fixed .fixed_box_bottom > div:nth-child(3) a{
+    margin-top: -2px;
+}
+
+.fixed .fixed_box_bottom > .fixed_items > a img{
+    width: 24px;
+    height: 24px;
+}
+
+.fixed .fixed_box_bottom > .fixed_items > a div{
+    font-size: 12px;
+    color: #666;
+    padding-top: 2px;
+}
+
+.fixed .fixed_box_bottom > .fixed_items > a > span > div{
+    color: #fff;
+}
+
+.fixed .fixed_box_bottom > .fixed_items > a > span{
+    display: none;
+}
+
+.fixed .fixed_box_bottom > .fixed_items > a:hover i{
+    display: none;
+}
+.fixed .fixed_box_bottom > .fixed_items > a:hover span{
+    display: block;
+}
+.fixed .fixed_box_bottom > .fixed_items > a:hover{
+    background-color: #00cc7e;
+}
+
+.fixed .fixed_box_bottom > .fixed_line{
+    display: inline-block;
+    width: 24px;
+    border: 1px solid #e6e6e6;
+}
+
+
+
+/* 底部footer区域 */
+
+.footer{
+    width: 100%;
+    height: 260px;
+    background-color: #272727;
+    border-top: 1px solid #272727;
+    padding: 30px 0 35px 0;
+}
+
+.footer .footer_top{
+    height: 115px;
+    /* background-color: skyblue; */
+}
+
+.footer .footer_top .footer_top_left{
+    float: left;
+    width: 516px;
+    height: 69px;
+    /* background-color: pink; */
+}
+
+.footer .footer_top .footer_top_left > .logo{
+    width: 100%;
+    height: 37px;
+    background: url(../images/logo_2.png) no-repeat 0 0;
+    background-size: contain;
+}
+
+.footer .footer_top .footer_top_left > p{
+    margin-top: 12px;
+    font-size: 12px;
+    color: #999;
+}
+
+.footer .footer_top .footer_top_right{
+    float: right;
+}
+
+.footer .footer_top .footer_top_1{
+    width: 72px;
+    height: 90px;
+    /* background-color: pink; */
+}
+
+.footer .footer_top .footer_top_1 > dl > dt{
+    height: 24px;
+    margin-bottom: 16px;
+    color: #ccc;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.footer .footer_top .footer_top_1 > dl > dd > a{
+    display: block;
+    height: 25px;
+    color: #999;
+    font-size: 12px;
+    transition: color .3s;
+}
+
+.footer .footer_top .footer_top_1 > dl > dd > a:hover{
+    color: #00ad4d;
+}
+
+.footer .footer_top .footer_top_2{
+    width: 180px;
+    height: 84px;
+    /* background-color: pink; */
+}
+
+.footer .footer_top .footer_top_2 > h4{
+    height: 24px;
+    color: #ccc;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.footer .footer_top .footer_top_2 .footer_top_2_icons a div{
+    display: inline-block;
+    font-family: "iconfont";
+    margin-right: 4px;
+    font-size: 45px;
+    color: #fff;
+    transition: all 0.6s;
+}
+
+.footer .footer_top .footer_top_2 .footer_top_2_icons a .footer_top_2_icons_1:hover{
+    color: #00cc7e;
+}
+.footer .footer_top .footer_top_2 .footer_top_2_icons a .footer_top_2_icons_2:hover{
+    color: #f8142d;
+}
+
+.footer .footer_top .footer_top_3{
+    width: 128px;
+    height: 115px;
+    margin-right: 80px;
+    /* background-color: pink; */
+}
+
+.footer .footer_top .footer_top_3 > h4{
+    width: 128px;
+    height: 24px;
+    margin-bottom: 16px;
+    color: #ccc;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.footer .footer_top .footer_top_3 > div > a{
+    display: inline-block;
+    width: 60px;
+    height: 25px;
+    color: #999;
+    font-size: 12px;
+}
+
+.footer .footer_top .footer_top_3 > div > a:hover{
+    color: #00ad4d;
+}
+
+.footer .footer_bottom{
+    height: 80px;
+    /* background-color: pink; */
+    text-align: center;
+    margin-top: 3px;
+}
+
+.footer .footer_bottom p{
+    color: #666;
+    font-size: 12px;
+}
